@@ -1,32 +1,38 @@
-# Hello World Static Page
+# Hello World Static Page (Round 2)
 
 ## Overview
 A minimal static web page that displays:
 - A heading (h1) with “Hello, world!”
 - A preformatted text block (pre)
-- An image (img) sourced from the provided attachment `hello.jpg`
+- An image (img) sourced from the provided attachment `bye.jpg`
 
 This project is suitable for deployment on GitHub Pages.
 
 ## Setup
-1. Ensure the file structure in your repository root is:
-   - index.html
-   - hello.jpg
-   - README.md
+1. Place the following files in your repository root:
+   - `index.html`
+   - `bye.jpg`
+   - `README.md`
 
 2. Commit and push to your GitHub repository.
 
 3. Enable GitHub Pages:
    - Go to Settings → Pages
-   - Select the branch (e.g., main) and root folder
+   - Select the branch (e.g., `main`) and root folder
    - Save and wait for the site to be published
 
 ## Usage
-- Open index.html locally in your browser, or visit the GitHub Pages URL once deployed.
+- Open `index.html` locally in your browser, or visit the GitHub Pages URL once deployed.
 - You should see:
   - The “Hello, world!” heading
   - A preformatted description block
-  - The image rendered from `hello.jpg`
+  - The image rendered from `bye.jpg`
+
+## Improvements in Round 2
+- Replaced the previous `hello.jpg` with the new `bye.jpg` per the updated brief.
+- Updated the HTML and README to reference `bye.jpg`.
+- Added alt text to the image for accessibility and `loading="lazy"` for performance.
+- Minor styling polish while keeping the page simple and fully static.
 
 ## License
 MIT License
