@@ -1,0 +1,52 @@
+# Hello World Static Page
+
+## Overview
+A minimal static web page that displays:
+- A heading (h1) with “Hello, world!”
+- A preformatted text block (pre)
+- An image (img) sourced from the provided attachment `hello.jpg`
+
+This project is suitable for deployment on GitHub Pages.
+
+## Setup
+1. Ensure the file structure in your repository root is:
+   - index.html
+   - hello.jpg
+   - README.md
+
+2. Commit and push to your GitHub repository.
+
+3. Enable GitHub Pages:
+   - Go to Settings → Pages
+   - Select the branch (e.g., main) and root folder
+   - Save and wait for the site to be published
+
+## Usage
+- Open index.html locally in your browser, or visit the GitHub Pages URL once deployed.
+- You should see:
+  - The “Hello, world!” heading
+  - A preformatted description block
+  - The image rendered from `hello.jpg`
+
+## License
+MIT License
+
+Copyright (c) 2025
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
