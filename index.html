@@ -2,87 +2,168 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hello, world! — Static Page (Round 2)</title>
-  <meta name="description" content="A minimal static page with a Hello, world! heading, a preformatted block, and an image sourced from bye.jpg." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hello World Static Page (Round 2)</title>
+  <meta name="description" content="A minimal static page with an H1, a preformatted block, and an image sourced from bye.jpg." />
   <style>
-    :root{
-      --bg1:#0b1020; --bg2:#131a2b; --fg:#e2e8f0; --muted:#94a3b8;
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #60a5fa;
+      --border: #1f2937;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-      color:var(--fg);
-      background: linear-gradient(180deg, var(--bg1), var(--bg2));
-      display:grid;
-      place-items:center;
+
+    html, body {
+      height: 100%;
     }
-    main{
-      width:min(900px,92vw);
-      padding:2rem;
-      border-radius:16px;
-      background:rgba(255,255,255,.04);
-      box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 20% -10%, #111827, var(--bg)) fixed;
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-    h1{
-      margin:0 0 1rem;
-      font-size:clamp(2rem, 2.5vw + 1rem, 3rem);
-      line-height:1.2;
-      letter-spacing:.3px;
+
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 48px 20px 64px;
     }
-    pre{
-      margin:0 0 1.25rem;
-      padding:1rem;
-      background:rgba(0,0,0,.35);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:12px;
-      font-size:.95rem;
-      white-space:pre-wrap;
-      overflow:auto;
+
+    header {
+      text-align: center;
+      margin-bottom: 28px;
     }
-    figure{margin:0}
-    img{
-      display:block;
-      width:100%;
-      height:auto;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,.1);
-      box-shadow:0 8px 24px rgba(0,0,0,.45);
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin: 0 0 8px;
+      letter-spacing: 0.3px;
     }
-    figcaption{
-      margin-top:.5rem;
-      color:var(--muted);
-      font-size:.9rem;
-      text-align:center;
+
+    .tagline {
+      color: var(--muted);
+      font-size: 0.95rem;
     }
-    footer{
-      margin-top:1rem;
-      color:var(--muted);
-      font-size:.85rem;
-      text-align:center;
+
+    .panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 16px;
+      margin: 22px 0 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+
+    pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      color: #e7e9ee;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    .frame {
+      display: block;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #0b1220;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 16 / 9;
+    }
+
+    figcaption {
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    footer {
+      margin-top: 36px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <main>
-    <h1>Hello, world!</h1>
+    <header>
+      <h1>Hello, world!</h1>
+      <div class="tagline">Round 2 — Simple static page with an H1, PRE, and an image from bye.jpg</div>
+    </header>
 
-    <pre>
-This is a minimal static page ready for GitHub Pages.
+    <section class="panel" aria-labelledby="about">
+      <pre id="about">
+This is a minimal static page intended for GitHub Pages.
 
-Round 2 update:
-- The image source now points to "bye.jpg" from the provided attachments.
-- The page continues to show the &lt;h1&gt; heading and &lt;pre&gt; block for evaluation.
-    </pre>
+It demonstrates:
+- A heading (H1) that says “Hello, world!”
+- A preformatted block (PRE) describing the page
+- An image loaded from the provided attachment: bye.jpg
 
-    <figure>
-      <img src="bye.jpg" alt="A friendly goodbye image (bye)" loading="lazy" />
-      <figcaption>Image source: bye.jpg</figcaption>
+Notes:
+- The image includes alt text for accessibility
+- loading="lazy" and decoding="async" are used for better performance
+- Everything is fully static (HTML/CSS/JS) and deployable as-is
+      </pre>
+    </section>
+
+    <figure aria-label="Sample image">
+      <div class="frame">
+        <img
+          src="bye.jpg"
+          alt="A friendly goodbye illustration labeled bye.jpg"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <figcaption>Image source: bye.jpg (provided attachment)</figcaption>
     </figure>
 
-    <footer>MIT License · © 2025</footer>
+    <footer>
+      <span>MIT Licensed • Place this alongside bye.jpg and deploy via GitHub Pages.</span>
+    </footer>
   </main>
+
+  <script>
+    // Small enhancement: show a console hint to verify the image reference.
+    window.addEventListener('DOMContentLoaded', () => {
+      const img = document.querySelector('img[alt*="goodbye"]') || document.querySelector('img[src$="bye.jpg"]');
+      if (img && img.complete) {
+        console.info('Image loaded (or cached):', img.currentSrc || img.src);
+      } else if (img) {
+        img.addEventListener('load', () => console.info('Image loaded:', img.currentSrc || img.src));
+        img.addEventListener('error', () => console.warn('Failed to load image: bye.jpg'));
+      }
+    });
+  </script>
 </body>
 </html>
