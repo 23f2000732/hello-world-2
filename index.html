@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hello World • Simple Static Page</title>
+  <style>
+    :root {
+      --bg: #0f172a;        /* slate-900 */
+      --panel: #111827;     /* gray-900 */
+      --text: #e5e7eb;      /* gray-200 */
+      --muted: #9ca3af;     /* gray-400 */
+      --accent: #38bdf8;    /* sky-400 */
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: radial-gradient(1200px 600px at 20% 0%, #1f2937 0%, var(--bg) 50%);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+      display: grid;
+      gap: 20px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 40px);
+      letter-spacing: 0.3px;
+    }
+    .badge {
+      font-size: 12px;
+      padding: 4px 8px;
+      border: 1px solid #334155;
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(2, 6, 23, 0.4);
+    }
+    .panel {
+      background: linear-gradient(180deg, rgba(2,6,23,0.6), rgba(17,24,39,0.8));
+      border: 1px solid #283548;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    pre {
+      margin: 0;
+      padding: 14px 16px;
+      overflow: auto;
+      border-radius: 8px;
+      border: 1px solid #273449;
+      background: #0b1220;
+      color: #c7d2fe;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      tab-size: 2;
+      white-space: pre-wrap;
+    }
+    figure {
+      margin: 0;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid #283548;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.28);
+      background: #0b1220;
+    }
+    figcaption {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 8px;
+      text-align: center;
+    }
+    footer {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      margin-top: 8px;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Hello, world!</h1>
+      <span class="badge" id="badge">Static HTML • JS • CSS</span>
+    </header>
+
+    <section class="panel">
+      <pre>
+Hello, world!
+This is a simple static web page served via GitHub Pages.
+
+Elements present:
+- h1 heading that says "Hello, world!"
+- pre block (this one)
+- img tag that displays the provided attachment (hello.jpg)
+      </pre>
+    </section>
+
+    <figure class="panel">
+      <img src="hello.jpg" alt="Hello attachment image" id="hello-image">
+      <figcaption>Image: hello.jpg</figcaption>
+    </figure>
+
+    <footer>
+      MIT Licensed. Deployed on GitHub Pages.
+    </footer>
+  </main>
+
+  <script>
+    // Enhance the badge with a tiny runtime detail (optional)
+    (function () {
+      const el = document.getElementById('badge');
+      const supportsWebp = (function () {
+        try {
+          return document
+            .createElement('canvas')
+            .toDataURL('image/webp')
+            .indexOf('data:image/webp') === 0;
+        } catch (e) {
+          return false;
+        }
+      })();
+      const now = new Date().toLocaleString();
+      el.textContent = `Static HTML • JS • CSS • ${supportsWebp ? 'WebP OK' : 'WebP N/A'} • ${now}`;
+    })();
+  </script>
+</body>
+</html>
